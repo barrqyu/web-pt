@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website Pt</title>
+    <link href="dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="./src/input.css">
+  </head>
+  <body>
+    <!-- hero content -->
+    <div class="bg-hero">
+      <!-- navbar start -->
+      <!-- nav dekstop -->
+      <div class="flex md:justify-between">
+          <div class="flex items-center pl-8 hidden md:block">
+            <h1 class="md:text-2xl text-m mt-[40px]">Ada <span class="text-[#4B0372]">Ngoding</span></h1>
+          </div>
+          <div class="hidden md:block">
+            <nav>
+              <ul class="flex flex-row py-4 px-8 rounded-l-full bg-[#0E0B16] mt-8 ">
+                <li class="flex items-center mr-8 text-white"><a href="#">Home</a></li>
+                <li class="flex items-center mr-8 text-white"><a href="#">About</a></li>
+                <li class="flex items-center mr-8 text-white"><a href="#">Contact Me</a></li>
+                <form class="hidden md:block">
+                  <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+                  <div class="relative">
+                    <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                      <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                      </svg>
+                    </div class='w-56'>
+                    <input
+                      type="search"
+                      id="default-search"
+                      class="block p-2 pl-10 w-72 text-sm text-gray-900 bg-gray-50 rounded-full border border-gray-300"
+                      placeholder="Search"
+                      required
+                    />
+                    <button
+                      type="submit"
+                      class="text-white absolute left-[238px] mb-[-6px] bottom-2.5 bg-pink-400 hover:bg-pink-700 font-medium rounded-full text-[10px] px-2 py-2"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </ul>
+            </nav>
+          </div>
+          <div class="md:hidden w-[100%] px-[20px] bg-[#0E0B16] py-[14px] fixed z-50">
+            <div class="flex justify-center">
+              <h1 class="md:text-2xl text-xl mb-2">Ada <span class="text-[#4B0372]">Ngoding</span></h1>
+            </div>           
+            <form>
+                <div class="flex justify-center items-center">
+                    <label for="search-dropdown" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Your Email</label>
+                    <button id="dropdown-button" data-dropdown-toggle="dropdown" class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-l-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600" type="button">Menu<svg aria-hidden="true" class="ml-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                    <div id="dropdown" class="hidden z-10 w-44 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style="position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(0px, 361px);">
+                        <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdown-button">
+                          <li>
+                              <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Home</button>
+                          </li>
+                          <li>
+                              <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">About</button>
+                          </li>
+                          <li>
+                              <button type="button" class="inline-flex py-2 px-4 w-full hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Contact Me</button>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="relative w-full">
+                        <input type="search" id="search-dropdown" class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-r-lg border-l-gray-50 border-l-2 border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-l-gray-700  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500" placeholder="Search...." required="">
+                        <button type="submit" class="absolute top-0 right-0 p-2.5 text-sm font-medium text-white bg-pink-400 rounded-r-lg border  hover:bg-pink-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                            <span class="sr-only">Search</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+          </div>
+      </div>
+      <!-- navbar end -->
+        <div class="flex flex-col">
+          <div class="flex flex-col  md:justify-between">
+            <div class="flex justify-center">
+              <img class="h-[250px] w-[250px] md:h-[600px] md:w-[600px] mt-[150px] md:mt-[0] animate-bounce md:animate-none md:mr-[-800px]" src="./assets/image1.png" alt="">
+            </div>             
+              <img class="hidden md:block w-[650px] h-[500px] mt-[-580px] ml-[300px]" src="./assets/word2.png" alt="">
+            <div class="flex justify-center md:hidden">
+              <img class="h-[200px] md:hidden" src="./assets/word3.png" alt="">
+            </div>
+            <div class="flex justify-center mt-4 md:ml-[-1180px]">
+              <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">Contact Me</button>
+              <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+              <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  Learn More
+              </span>
+              </button>
+            </div>  
+          </div>
+          <div>
+            <img class="mt-[170px] md:mt-8 md:h-[200px] w-[100%]" src="./assets/vektor4.png" alt="">
+          </div>
+        </div>
+    </div>      
+    <!-- hero content end -->
+    <!-- about -->
+    <div class="px-4 pt-4">
+    <div class="flex justify-center mb-4">
+      <h1 class="text-2xl text-[#4B0372]">About</h1>
+    </div>
+    <div class="flex justify-center text-center">
+      <p>Ada ngoding adalah layanan pembuatan website yang dibangun pada 
+      13 oktober 2022 dibentuk oleh muhamad ilham sebagai CEO ada ngoding
+      </p>
+    </div>
+    </div>
+    <!-- Contact Me -->
+    <div class="flex flex-col mt-8">
+      <div>
+        <div class="flex justify-center">
+          <h1 class="text-2xl text-[#4B0372]">Contact Me</h1>
+        </div>
+        <div class="flex justify-center mb-4">
+          <p>If you want to be a patner, please fill this form :</p>
+        </div>
+        <div class="flex justify-center items-center">
+            <div class="w-[50%] md:ml-[190px]">
+                <form action="" class="font-['poppins'] text-[#BF56D8] font-extrabold md:text-xl" >Nama :</form>
+                <input type="text" class="md:w-[803px] rounded-lg">
+                <form action="" class="font-[poppins] text-[#BF56D8] font-extrabold md:text-xl mt-3">Email :</form>
+                <input type="text" class="md:w-[803px] rounded-lg">
+                <form action="" class="font-[poppins] text-[#BF56D8] font-extrabold md:text-xl mt-3 hidden md:block">Message :</form>
+                <textarea name="" id="" cols="105" rows="10" class="rounded-lg hidden md:block"></textarea>
+                <form action="" class="font-[poppins] text-[#BF56D8] font-extrabold md:text-xl mt-3 md:hidden">Message :</form>
+                <textarea name="" id="" cols="24" rows="10" class="rounded-lg md:hidden"></textarea>
+                <button type="button" class=" mt-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm  px-5 py-2.5 text-center  mb-4">Learn More..</button>
+             </div>
+        </div>      
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="flex flex-col">
+        <div>
+          <img  class="mt-[-5px] md:w-[100%]" src="./assets/Vector5.png" alt="">
+        </div>
+        <div class="flex justify-between p-3">
+          <div class="md:ml-[200px]">
+            <h1 class="text-l ">Ada <span class="text-[#4B0372]">Ngoding</span></h1>
+          </div>
+          <div>
+            <ul>
+                <h1 class="text-lg">Navbar</h1>
+                <li class="text-[#D9D9D9]">Home</li>
+                <li class="text-[#D9D9D9]">About</li>
+                <li class="text-[#D9D9D9]">Contact Me</li>
+            </ul>
+          </div>
+          <div class="md:mr-[300px]">
+            <h1 class="text-lg">Company</h1>
+            <p class="text-[#D9D9D9] text-sm">PT.Solusindo Informatich<br> Indonesia
+            Tangerang,<br> Indonesa</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- script -->
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+  </body>
+</html>
